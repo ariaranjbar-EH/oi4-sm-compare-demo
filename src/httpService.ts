@@ -4,7 +4,7 @@ export class HttpService {
   async getAsIsAAS() {
     try {
       const as_built_id = 'aHR0cHM6Ly9uZXRpbGlvbi1hYXMtY29ubmVjdG9yLmhlcm9rdWFwcC5jb20vdjEvY29uZmlndXJhdGlvbnNfYXNfYnVpbHQvMzk2NTk5'
-      const response = await fetch(aws_sm_url + as_built_id)
+      const response = await fetch(aws_sm_url + as_built_id + '/')
       return await response.text();
     } catch (error) {
       console.log(error)
@@ -15,7 +15,7 @@ export class HttpService {
   async getAsPlannedAAS() {
     try {
       const as_planned_id = 'aHR0cHM6Ly9uZXRpbGlvbi1hYXMtY29ubmVjdG9yLmhlcm9rdWFwcC5jb20vdjEvY29uZmlndXJhdGlvbnNfYXNfZG9jdW1lbnRlZC8zOTY1OTk='
-      const response = await fetch(aws_sm_url + as_planned_id)
+      const response = await fetch(aws_sm_url + as_planned_id + '/')
       return await response.text();
     } catch (error) {
       console.log(error)
