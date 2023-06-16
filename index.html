@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/img/logo_barth_blau.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASSDiff</title>
+  </head>
+  <body>
+    <header>
+      <div class="logos">
+        <img class="logo" src="img/AAS.png" alt="logo" />
+        <img class="logo-right" src="img/E+H.jpg" alt="logo" />
+        <img class="logo-right" src="img/IRS-Logo.png" alt="logo" />
+        <img class="logo-right" src="img/Logo_KIT.png" alt="logo" />
+        <img class="logo-right" src="img/BI.jpg" alt="logo" />
+      </div>
+      <div class="head">
+        <h1 class="title" id="title">
+          Continuous Device parameter monitoring with Digital Twins (AAS)
+        </h1>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="column">
+        <p class="info-title">ENGINEERING INFORMATION</p>
+      </div>
+      <div class="column">
+        <p class="info-title">MAINTENANCE INFORMATION</p>
+      </div>
+    </div>
+
+    <img class="sensor" id="sensor-img" src="img/tm411_text.png" alt="logo" />
+
+    <div class="main-container">
+      <div class="inner-container">
+        <div class="controls">
+          <div class="controls-column">
+            <span class="control-text">Documented value</span>
+          </div>
+          <div class="controls-column">
+            <span class="control-text">Current value</span>
+          </div>
+        </div>
+
+        <div class="container" id="container" disabled>
+          <main>
+            <div id="editor" class="editor"></div>
+          </main>
+        </div>
+
+        <div class="controls" id="valueDisplay">
+          <div class="controls-column">
+            <div class="wrapper">
+              <p class="measure-value" id="measureRangePlanned">loading</p>
+              <p class="measure-title">
+                Measuring <br />
+                range
+              </p>
+            </div>
+          </div>
+          <div class="controls-column">
+            <div class="wrapper">
+              <p class="measure-value" id="measureRangeIs">loading</p>
+              <p class="measure-title">
+                Measuring <br />
+                range
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <button type="button" class="button" id="switch">Switch</button>
+      </div>
+
+      <div class="bottom-container">
+        <div class="badge" id="compare">Permanent compare</div>
+        <div class="ring" id="ring">
+          Equal
+          <span class="loader" id="loader"></span>
+        </div>
+        <div class="differ" id="differ">Differing</div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/src/main.ts"></script>
+</html>
