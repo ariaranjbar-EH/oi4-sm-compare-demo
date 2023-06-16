@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/oi4-sm-compare-demo/assets/logo_barth_blau-1557e2bb.png" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASSDiff</title>
+    <script type="module" crossorigin src="/oi4-sm-compare-demo/assets/index-beb25a80.js"></script>
+    <link rel="stylesheet" href="/oi4-sm-compare-demo/assets/index-6ed7b92e.css">
+  </head>
+  <body>
+    <header>
+      <div class="logos">
+        <img class="logo" src="data:image/png;base64,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" alt="logo" />
+        <img class="logo-right" src="/oi4-sm-compare-demo/assets/E_H-29ae3aaa.jpg" alt="logo" />
+        <img class="logo-right" src="/oi4-sm-compare-demo/assets/IRS-Logo-fadd79f9.png" alt="logo" />
+        <img class="logo-right" src="/oi4-sm-compare-demo/assets/Logo_KIT-462b7e7b.png" alt="logo" />
+        <img class="logo-right" src="/oi4-sm-compare-demo/assets/BI-56041354.jpg" alt="logo" />
+      </div>
+      <div class="head">
+        <h1 class="title" id="title">
+          Continuous Device parameter monitoring with Digital Twins (AAS)
+        </h1>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="column">
+        <p class="info-title">ENGINEERING INFORMATION</p>
+      </div>
+      <div class="column">
+        <p class="info-title">MAINTENANCE INFORMATION</p>
+      </div>
+    </div>
+
+    <img class="sensor" id="sensor-img" src="/oi4-sm-compare-demo/assets/tm411_text-6617cd76.png" alt="logo" />
+
+    <div class="main-container">
+      <div class="inner-container">
+        <div class="controls">
+          <div class="controls-column">
+            <span class="control-text">Documented value</span>
+          </div>
+          <div class="controls-column">
+            <span class="control-text">Current value</span>
+          </div>
+        </div>
+
+        <div class="container" id="container" disabled>
+          <main>
+            <div id="editor" class="editor"></div>
+          </main>
+        </div>
+
+        <div class="controls" id="valueDisplay">
+          <div class="controls-column">
+            <div class="wrapper">
+              <p class="measure-value" id="measureRangePlanned">loading</p>
+              <p class="measure-title">
+                Measuring <br />
+                range
+              </p>
+            </div>
+          </div>
+          <div class="controls-column">
+            <div class="wrapper">
+              <p class="measure-value" id="measureRangeIs">loading</p>
+              <p class="measure-title">
+                Measuring <br />
+                range
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <button type="button" class="button" id="switch">Switch</button>
+      </div>
+
+      <div class="bottom-container">
+        <div class="badge" id="compare">Permanent compare</div>
+        <div class="ring" id="ring">
+          Equal
+          <span class="loader" id="loader"></span>
+        </div>
+        <div class="differ" id="differ">Differing</div>
+      </div>
+    </div>
+  </body>
+  
+</html>
