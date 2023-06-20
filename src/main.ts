@@ -30,7 +30,7 @@ setInterval(() => {
   }}, 2000)
 
 const fixedWidthEditor = EditorView.theme({
-  "&": {width: "75vw"},
+  "&": {"max-width": "75vw", "font-size": "12px", "max-height": "20rem"},
   ".cm-scroller": {overflow: "auto"}
 })
 
@@ -124,6 +124,8 @@ async function switchToMainPage() {
   document.getElementById("valueDisplay")!.style.display = "flex"
   document.getElementById("container")!.style.display = "none"
   document.getElementById("sensor-img")!.style.display = "block"
+  document.getElementById("bottom-container")!.style.display = "flex"
+  document.getElementById("switch")!.style.marginTop = "auto"
 }
 
 async function switchToMergeView() {
@@ -134,6 +136,8 @@ async function switchToMergeView() {
   document.getElementById("valueDisplay")!.style.display = "none"
   document.getElementById("container")!.style.display = "block"
   document.getElementById("sensor-img")!.style.display = "none"
+  document.getElementById("bottom-container")!.style.display = "none"
+  document.getElementById("switch")!.style.marginTop = "7rem"
 }
 
 async function updateMeasuringRange() {
