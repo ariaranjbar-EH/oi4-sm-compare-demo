@@ -13,12 +13,18 @@ let asPlannedAASJSON
 let asIsAASJSON
 let measureRangePlanned = ""
 let measureRangeIs = ""
+let initial_load = true
 pull(true)
 
 // every 5 seconds
+
 setInterval(() => {
   try {
     pull(false)
+    if (initial_load) {
+      initial_load = false
+      switchToMainPage()
+    }
   } catch (e) {
     console.error(e);
   }}, 2000)
