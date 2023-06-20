@@ -13,7 +13,7 @@ let asPlannedAASJSON
 let asIsAASJSON
 let measureRangePlanned = ""
 let measureRangeIs = ""
-let initial_load = true
+let last_state: 'differing' | 'equal'  = 'differing'
 pull(true)
 
 // every 5 seconds
@@ -21,10 +21,6 @@ pull(true)
 setInterval(() => {
   try {
     pull(false)
-    if (initial_load) {
-      initial_load = false
-      switchToMainPage()
-    }
   } catch (e) {
     console.error(e);
   }}, 2000)
@@ -94,6 +90,7 @@ async function pull(differ: boolean) {
   diff = asPlannedAAS.split("\n").slice(5).join("\n") != asIsAAS.split("\n").slice(5).join("\n")
   console.log(diff)
   if (diff) {
+    last_state = 'differing'
     if (!isMainPage) {
       updateMergeView()
     } else {
@@ -101,6 +98,10 @@ async function pull(differ: boolean) {
     }
   } else {
     if (isMainPage) {
+      if (last_state == 'differing') {
+        last_state = 'equal'
+        updateMeasuringRange()
+      }
       document.getElementById("ring")!.style.display = "block";
       document.getElementById("differ")!.style.display = "none";
     }
